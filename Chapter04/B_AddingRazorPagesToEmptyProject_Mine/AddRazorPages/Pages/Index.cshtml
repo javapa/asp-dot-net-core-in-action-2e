@@ -1,0 +1,32 @@
+﻿@page
+@model AddRazorPages.Pages.IndexModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+     <meta name="viewport" content="width=device-width" />
+     <title>Index</title>
+     <style>
+         body {
+             background-color:aliceblue;
+             padding-top:25%;
+         }
+
+         #container {
+             margin: auto;
+             width: 50%;
+         }
+     </style>
+</head>
+<body>
+    <div id="container">
+        <table>
+            <tr><td>@Model.RandomQuote.Text</td></tr>
+            <tr><td>@Model.RandomQuote.Author</td></tr>
+        </table>        
+    </div>
+</body>
+</html>
