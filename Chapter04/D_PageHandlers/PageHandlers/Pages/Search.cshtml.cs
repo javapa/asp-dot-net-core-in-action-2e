@@ -24,7 +24,7 @@ namespace PageHandlers
         {
         }
 
-        public IActionResult OnPost()
+        public IActionResult OnPost(int max)
         {
             if (ModelState.IsValid)
             {

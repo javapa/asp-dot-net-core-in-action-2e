@@ -9,5 +9,7 @@ namespace AddRazorPages.Services
         Task<IEnumerable<Quote>> GetQuotes();
 
         Task<Quote> GetRandomQuote();
+
+        Task<Quote> GetQuoteById(int id);
     }
 }

@@ -1,0 +1,23 @@
+﻿@import "reset.css";
+
+html {
+    box-sizing:border-box;
+}
+
+body {
+    background-color: aliceblue;    
+}
+
+article {
+    padding-top: 25%;
+}
+
+header li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+}

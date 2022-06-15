@@ -2,12 +2,14 @@
 {
     public class Quote
     {
-        public Quote(string text, string author)
+        public Quote(int id, string text, string author)
         {
+            Id = id;
             Author = author;
             Text = text;
         }
 
+        public int Id { get; set; }
         public string Author { get; set; }
         public string Text { get; set; }
 

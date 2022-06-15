@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id?}"
 @model AddRazorPages.Pages.IndexModel
 @{
     Layout = null;
@@ -7,26 +7,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-     <meta name="viewport" content="width=device-width" />
-     <title>Index</title>
-     <style>
-         body {
-             background-color:aliceblue;
-             padding-top:25%;
-         }
-
-         #container {
-             margin: auto;
-             width: 50%;
-         }
-     </style>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/css/style.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="container">
-        <table>
-            <tr><td>@Model.RandomQuote.Text</td></tr>
-            <tr><td>@Model.RandomQuote.Author</td></tr>
-        </table>        
-    </div>
+    <header class="center">
+        <nav>
+            <ul>
+                <li><a href="Index">Home</a></li>
+                <li>|</li>
+                <li><a href="Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="center">
+        <article>
+            <h4>Quote using the &lt;q&gt; tag</h4>
+            <q>
+                @Model.Quote.Text
+                <br />
+                @Model.Quote.Author
+            </q>
+
+            <h4>Quote using the &lt;blockquote&gt; tag</h4>
+            <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                <p>
+                    @Model.Quote.Text
+                    <br />
+                    @Model.Quote.Author
+                </p>
+            </blockquote>
+        </article>
+        <p>
+            @foreach(var url in Model.URLS)
+            {
+                <p>@url</p>
+            }
+        </p>
+    </main>
 </body>
 </html>
